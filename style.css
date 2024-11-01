@@ -1,0 +1,17 @@
+header {
+    display: flex;
+    align-items: center;
+}
+span {
+    color: rgb(161, 78, 1);
+}
+
+body {
+    padding: 20px 80px;
+    ;
+}
+
+
+#background_shall {
+    background-color: rgb(3, 212, 132);
+}
