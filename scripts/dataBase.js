@@ -180,7 +180,7 @@ let books = [
 
 for (let index = 0; index < books.length; index++) {
 
-    let titleRef = document.getElementById("infos_content")
+    let titleRef = document.getElementById("content")
 
     
 
@@ -204,7 +204,7 @@ for (let index = 0; index < books.length; index++) {
     console.log(commentArr);
     
 
-    titleRef.innerHTML = bookInfoTemplete(index,commentArr)
+    titleRef.innerHTML += bookInfoTemplete(index,commentArr)
 }
     
     
@@ -212,34 +212,62 @@ for (let index = 0; index < books.length; index++) {
 function bookInfoTemplete(index,commentArr) {
    
     return  `
-    
+                        <div class="bookCard">
                             <div>
-                                <h1 class="title">${books[index].name}</h1>
+                                <h2 class="title">${books[index].name}</h2>
                             </div>
-                            <img src="" alt="Bild eines Buchs">
+                                <div>
+                                    <img src="" alt="Bild eines Buchs">
+                                </div>
                             <div>
-                                <div class="price">${books[index].price}</div>
-                                <div class="likes">${books[index].likes}</div>
+                                <div class="price">
+                                    ${books[index].price}
+                                </div>
+                                <div class="likes">
+                                    ${books[index].likes}
+                                </div>
                                 <input type="checkbox" name="" class="liked">
                             </div>
                             <div>
-                            <div>
-                                <div>Author:</div>
-                                <div class="author">${books[index].author}</div>
-                            </div>
-                            <div>
-                                <div>Erscheinungsjahr:</div>
-                                <div class="publishedYear">${books[index].publishedYear}</div>
-                            </div>
-                            <div>
-                                <div>Genre:</div>
-                                <div class="genre">${books[index].genre}</div>
-                            </div>
-                            <div>
-                            <h3>Kommentare :</h3>
-                            <div>${commentArr}</div>
-                            </div>                     
-            `
+                                <div>
+                                    <div>
+                                        Author:
+                                    </div>
+                                    <div class="author">
+                                        ${books[index].author}
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        Erscheinungsjahr:
+                                    </div>
+                                    <div class="publishedYear">
+                                        ${books[index].publishedYear}
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        Genre:
+                                    </div>
+                                    <div class="genre">
+                                        ${books[index].genre}
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="comment_Area">
+                                        <h3>Kommentare :</h3>
+                                    <div>
+                                        ${commentArr}</div>
+                                    </div> 
+                                    <div>
+                                        <input type="text">
+                                        <button type="button">
+                                            <img src="" alt="absende Knopf">
+                                        </button>
+                                    </div>                  
+                                </div
+                            </div
+                        </div`
 }
 
 
